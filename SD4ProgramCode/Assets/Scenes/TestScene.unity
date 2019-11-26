@@ -283,14 +283,14 @@ MonoBehaviour:
   m_fMoveValue: 2890992
   m_bLookAtFunction: 0
   m_v3LookAtTarget: {x: 234567, y: 123456, z: 536186750}
-  m_bSmoothDampFunction: 1
+  m_bSmoothDampFunction: 0
   m_v3DampCurrent: {x: 353225, y: 343253, z: 654346}
   m_v3DampTarget: {x: 1.3454565e+10, y: 53465652, z: 8653299}
   m_v3DampVelocity: {x: 478239140, y: 64267576, z: 29475756}
   m_fDampTime: 100000000
   m_bLogFunction: 0
-  m_fLogValue: 0
-  m_fLogPower: 0
+  m_fLogValue: 426957800
+  m_fLogPower: 753
   m_bRandomFunction: 0
-  m_fRandomMin: 0
-  m_fRandomMax: 0
+  m_fRandomMin: 1
+  m_fRandomMax: 50

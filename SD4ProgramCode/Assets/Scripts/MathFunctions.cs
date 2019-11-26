@@ -61,7 +61,7 @@ public class MathFunctions : MonoBehaviour
 
     public Vector3 m_v3LookAtTarget;
 
-    [Header("Transform Vector Function")]
+    [Header("Smooth Damp Function")]
     public bool m_bSmoothDampFunction;
 
     public Vector3 m_v3DampCurrent;
@@ -85,7 +85,6 @@ public class MathFunctions : MonoBehaviour
     public float m_fRandomMin;
 
     public float m_fRandomMax;  
-
 
     // Update is called once per frame
     void Update() 
@@ -132,12 +131,12 @@ public class MathFunctions : MonoBehaviour
 
         if (m_bLogFunction)
         {
-            Mathf.Log(m_fLogValue, m_fLogPower);
+            Log(m_fLogValue, m_fLogPower); 
         }
 
         if (m_bRandomFunction)
         {
-            Random.Range(m_fRandomMin, m_fRandomMax);  
+            Rand(m_fRandomMin, m_fRandomMax); 
         }
     }
 
@@ -179,5 +178,15 @@ public class MathFunctions : MonoBehaviour
     private void SmoothDamp(Vector3 v3DampCurrent, Vector3 v3DampTarget, Vector3 v3DampVelocity, float fDampTime)
     {
         Vector3.SmoothDamp(v3DampCurrent, v3DampTarget, ref v3DampVelocity, fDampTime);
+    }
+
+    private void Log(float fLogValue, float fLogPower)
+    {
+        Mathf.Log(fLogValue, fLogPower);
+    }
+
+    private void Rand(float fMin, float fMax)
+    {
+        Random.Range(fMin, fMax);
     }
 }
