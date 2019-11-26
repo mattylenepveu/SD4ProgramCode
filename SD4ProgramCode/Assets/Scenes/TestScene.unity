@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1133794687}
   - component: {fileID: 1133794686}
+  - component: {fileID: 1133794688}
   m_Layer: 0
   m_Name: Compile Time Tester
   m_TagString: Untagged
@@ -227,7 +228,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133794685}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 859a393f546256f4793a6138bd2db128, type: 3}
   m_Name: 
@@ -239,10 +240,57 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1133794685}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.00011512586, y: 0.00021873834, z: 0.000000025182441, w: 1}
   m_LocalPosition: {x: -2.2243497, y: -1.9371979, z: -2.421875}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1133794688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133794685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f10ed4102601b149bc2046bedeb7a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_bClampFunction: 0
+  m_fClampValue: 1e+9
+  m_fClampMin: 999
+  m_fClampMax: 999999
+  m_bApproximatelyFunction: 0
+  m_fApproxA: 999999
+  m_fApproxB: 1000000
+  m_bDeltaAngleFunction: 0
+  m_fAngleCurrent: 1800000
+  m_fAngleTarget: 900000
+  m_bLerpFunction: 0
+  m_v3LerpVectorA: {x: 1111111, y: 1000, z: 2444244}
+  m_v3LerpVectorB: {x: 3339893, y: 579373, z: 221190290}
+  m_fLerpValue: 999999
+  m_bLerpUnclampedFunction: 0
+  m_v3ULerpVectorA: {x: 1111111, y: 1000, z: 2444244}
+  m_v3ULerpVectorB: {x: 3339893, y: 579373, z: 221190300}
+  m_fULerpValue: 999999
+  m_bMoveTowardsFunction: 0
+  m_v3MoveCurrent: {x: 12454346, y: 1233234, z: 43567}
+  m_v3MoveTarget: {x: 43446576, y: 346576580, z: 3543567}
+  m_fMoveValue: 2890992
+  m_bLookAtFunction: 0
+  m_v3LookAtTarget: {x: 234567, y: 123456, z: 536186750}
+  m_bSmoothDampFunction: 1
+  m_v3DampCurrent: {x: 353225, y: 343253, z: 654346}
+  m_v3DampTarget: {x: 1.3454565e+10, y: 53465652, z: 8653299}
+  m_v3DampVelocity: {x: 478239140, y: 64267576, z: 29475756}
+  m_fDampTime: 100000000
+  m_bLogFunction: 0
+  m_fLogValue: 0
+  m_fLogPower: 0
+  m_bRandomFunction: 0
+  m_fRandomMin: 0
+  m_fRandomMax: 0
