@@ -52,7 +52,6 @@
 
 -Approximately Function (High Values)-
 
-4.17
 2.67
 2.73
 2.66
@@ -63,7 +62,6 @@
 2.71
 3.20
 2.92
-2.69
 
 -DeltaAngle Function (Low Values)-
 
@@ -77,7 +75,6 @@
 2.68
 2.68
 2.90
-2.75
 
 -DeltaAngle Function (High Values)-
 
@@ -260,7 +257,6 @@
 2.78
 2.83
 3.44
-3.00
 
 -Random Function (High Values)-
 
@@ -274,3 +270,29 @@
 3.51
 3.05
 2.81
+
+-All Functions (Low Values)-
+
+2.92
+2.72
+2.87
+2.99
+2.81
+3.18
+2.79
+2.93
+3.25
+3.03
+
+-All Functions (High Values)-
+
+3.48
+3.92
+3.22
+4.16
+4.11
+3.77
+3.97
+4.26
+3.55
+3.70

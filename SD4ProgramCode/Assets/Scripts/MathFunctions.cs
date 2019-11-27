@@ -18,7 +18,7 @@ public class MathFunctions : MonoBehaviour
     [Header("Approximately Function")]
     public bool m_bApproximatelyFunction;
 
-    public float m_fApproxA;
+    public float m_fApproxA; 
 
     public float m_fApproxB;
 
@@ -174,7 +174,7 @@ public class MathFunctions : MonoBehaviour
     {
         transform.LookAt(v3LookAtTarget);
     }
-
+     
     private void SmoothDamp(Vector3 v3DampCurrent, Vector3 v3DampTarget, Vector3 v3DampVelocity, float fDampTime)
     {
         Vector3.SmoothDamp(v3DampCurrent, v3DampTarget, ref v3DampVelocity, fDampTime);
@@ -188,5 +188,5 @@ public class MathFunctions : MonoBehaviour
     private void Rand(float fMin, float fMax)
     {
         Random.Range(fMin, fMax);
-    }
+    }  
 }
