@@ -150,7 +150,7 @@ public class MathFunctions : MonoBehaviour
     //--------------------------------------------------------------------------------
     // Function is called every frame and updates the scene when called.
     //--------------------------------------------------------------------------------
-    void Update() 
+    private void Update() 
     {
         // Calls the Clamp function with its parameters if Clamp bool is true
         if (m_bClampFunction) 
@@ -242,44 +242,100 @@ public class MathFunctions : MonoBehaviour
     // Function gives the angle between two delta float values.
     //
     // Param:
-    //      fApproxA: A float indicating the first value.
-    //      fApproxB: A float indicating the second value.
+    //      fApproxA: A float for the current angle in pheta.
+    //      fApproxB: A float representing the target angle.
     //--------------------------------------------------------------------------------
     private void DeltaAngle(float fAngleCurrent, float fAngleTarget)
     {
         Mathf.DeltaAngle(fAngleCurrent, fAngleTarget);
     }
 
+    //--------------------------------------------------------------------------------
+    // Function performs a lerp between two Vector3s.
+    //
+    // Param:
+    //      v3LerpVectorA: A Vector3 for the initial vector.
+    //      v3LerpVectorB: A Vector3 representing the target vector.
+    //      fLerpValue: A float that indicates the rate of the lerp.
+    //--------------------------------------------------------------------------------
     private void Lerp(Vector3 v3LerpVectorA, Vector3 v3LerpVectorB, float fLerpValue)
     {
         Vector3.Lerp(v3LerpVectorA, v3LerpVectorB, fLerpValue);
     }
 
-    private void LerpUnclamped(Vector3 v3ULerpVectorA, Vector3 v3ULerpVectorB, float fULerpValue)
+    //--------------------------------------------------------------------------------
+    // Function performs a lerp between two Vector3s and returns an unclamped value.
+    //
+    // Param:
+    //      v3ULerpVectorA: A Vector3 for the initial vector.
+    //      v3ULerpVectorB: A Vector3 representing the target vector.
+    //      fULerpValue: A float that indicates the rate of the lerp.
+    //--------------------------------------------------------------------------------
+    private void LerpUnclamped(Vector3 v3ULerpVectorA, Vector3 v3ULerpVectorB, 
+                               float fULerpValue)
     {
         Vector3.LerpUnclamped(v3ULerpVectorA, v3ULerpVectorB, fULerpValue);
     }
 
-    private void MoveTowards(Vector3 v3MoveCurrent, Vector3 v3MoveTarget, float fMoveValue)
+    //--------------------------------------------------------------------------------
+    // Function moves a Vector3 towards a target at a linear rate.
+    //
+    // Param:
+    //      v3MoveCurrent: A Vector3 indicating the current vector position.
+    //      v3MoveTarget: A Vector3 that outlines the vector of the target.
+    //      fMoveValue: A float for the rate of movement, usually deltaTime.
+    //--------------------------------------------------------------------------------
+    private void MoveTowards(Vector3 v3MoveCurrent, Vector3 v3MoveTarget, 
+                             float fMoveValue)
     {
         Vector3.MoveTowards(v3MoveCurrent, v3MoveTarget, fMoveValue);
     }
 
+    //--------------------------------------------------------------------------------
+    // Function makes an object look at a certain Vector3 position.
+    //
+    // Param:
+    //      v3LookAtTarget: A Vector3 for the target the object will look at.
+    //--------------------------------------------------------------------------------
     private void LookAt(Vector3 v3LookAtTarget)
     {
         transform.LookAt(v3LookAtTarget);
     }
-     
-    private void SmoothDamp(Vector3 v3DampCurrent, Vector3 v3DampTarget, Vector3 v3DampVelocity, float fDampTime)
+
+    //--------------------------------------------------------------------------------
+    // Function performs a smooth damp movement between two vectors.
+    //
+    // Param:
+    //      v3MoveCurrent: A Vector3 indicating the current vector position.
+    //      v3MoveTarget: A Vector3 that outlines the vector of the target.
+    //      v3DampVelocity: A Vector3 for the velocity that the dampening.
+    //      fMoveValue: A float for the deltaTime variable to be included.
+    //--------------------------------------------------------------------------------
+    private void SmoothDamp(Vector3 v3DampCurrent, Vector3 v3DampTarget, 
+                            Vector3 v3DampVelocity, float fDampTime)
     {
         Vector3.SmoothDamp(v3DampCurrent, v3DampTarget, ref v3DampVelocity, fDampTime);
     }
 
+    //--------------------------------------------------------------------------------
+    // Function calculates a logarithm, which is the opposite of an exponentiation.
+    //
+    // Param:
+    //      fLogValue: A float for the base value.
+    //      fLogPower: A float representing the power value in the equation.
+    //--------------------------------------------------------------------------------
     private void Log(float fLogValue, float fLogPower)
     {
         Mathf.Log(fLogValue, fLogPower);
     }
 
+    //--------------------------------------------------------------------------------
+    // Function chooses a random number between a parameter defined range.
+    //
+    // Param:
+    //      fMin: A float indicating the minimum value.
+    //      fMax: A float indicating the maximum value.
+    //--------------------------------------------------------------------------------
     private void Rand(float fMin, float fMax)
     {
         Random.Range(fMin, fMax);

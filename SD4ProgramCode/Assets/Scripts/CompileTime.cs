@@ -9,7 +9,7 @@ using System.IO;
 
 // Creates the CompileTime class, which only runs in Unity Editor
 [ExecuteInEditMode] 
-public class CompileTime : MonoBehaviour
+public class CompileTime : MonoBehaviour 
 {
     // Records the time that the program started compiling as a double
     private double m_dCompileStartTime;
